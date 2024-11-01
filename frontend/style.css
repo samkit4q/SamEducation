@@ -1,0 +1,91 @@
+/* Index Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #333;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Button Styling */
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.primary-btn {
+    background-color: #4CAF50;
+}
+
+.secondary-btn {
+    background-color: #333;
+}
+
+/* Resource & Digital Literacy Section Styling */
+.resources, .digital-literacy {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.resources h2, .digital-literacy h2 {
+    color: #4CAF50;
+}
+
+/* Featured Courses Section Styling */
+.featured-courses .course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.course-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.course-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 20px;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.testimonial-item {
+    margin: 15px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+

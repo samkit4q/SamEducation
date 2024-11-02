@@ -1,8 +1,16 @@
+# settings.py
+
+# Other settings...
+
+DEBUG = True  # Enable debug mode for development
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']  # Allow local connections
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # You can leave this empty
-        'APP_DIRS': True,  # This enables Django to find templates within your apps
+        'DIRS': [],  # Leave empty
+        'APP_DIRS': True,  # Enables finding templates within your apps
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -13,4 +21,6 @@ TEMPLATES = [
         },
     },
 ]
+
+# Other settings...
 

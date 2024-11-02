@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sign Up - Sam Education</title>
+    <title>Login - Sam Education</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +13,7 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 400px;
             margin: 50px auto;
             padding: 20px;
             background-color: white;
@@ -24,12 +23,7 @@
 
         h2 {
             text-align: center;
-            color:#333;
-        }
-
-        .intro {
-            text-align: center;
-            margin-bottom: 20px;
+            color: #333;
         }
 
         label {
@@ -38,7 +32,6 @@
             font-weight: bold;
         }
 
-        input[type="text"],
         input[type="email"],
         input[type="password"] {
             width: 100%;
@@ -52,7 +45,7 @@
         button {
             width: 100%;
             padding: 10px;
-            background-color: #28a745;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
@@ -62,7 +55,7 @@
         }
 
         button:hover {
-            background-color: #218838;
+            background-color: #0056b3;
         }
 
         .social-buttons {
@@ -87,9 +80,9 @@
 
 
         .social-button img {
-            width: 20px; /* Adjust size as needed */
-            height: 20px; /* Adjust size as needed */
-            margin-right: 8px; /* Space between logo and text */
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
         }
 
         .redirect {
@@ -97,31 +90,26 @@
             margin-top: 20px;
         }
 
-        .terms {
+        .recaptcha {
+            margin-top: 20px;
             font-size: 12px;
             text-align: center;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Sign Up</h2>
-        <div class="intro">
-            <p>Learn on your own time from top universities and businesses.</p>
-        </div>
-        <form action="/register" method="POST" id="registerForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-
+        <h2>Welcome Back</h2>
+        <form action="/login" method="POST" id="loginForm">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="name@email.com" required>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Create password" required>
-            <small>Your password must be between 8 and 72 characters.</small>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-            <button type="submit">Join for Free</button>
+            <p><a href="/forgot-password">Forgot password?</a></p>
+
+            <button type="submit">Login</button>
         </form>
 
         <div class="social-buttons">
@@ -140,14 +128,14 @@
         </div>
 
         <div class="redirect">
-            <p>Already on Sam Education? <a href="loginpage.html">Log in</a>.</p>
-            <p>Sign up with your organization</p>
+            <p>New to Sam Education? <a href="registerpage.html">Sign up</a>.</p>
+            <p>Log in with your organization</p>
         </div>
 
-        <div class="terms">
-            <p>I accept Sam Education's Terms of Use and Privacy Notice.</p>
-            <p>Having trouble logging in? Visit our <a href="/help">Learner Help Center</a>.</p>
+        <div class="recaptcha">
+            <p>This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.</p>
         </div>
     </div>
 </body>
 </html>
+

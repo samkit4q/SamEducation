@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - Sam Education</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Main Container */
+        .assignments-container {
+            padding: 40px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        /* Assignment Cards */
+        .assignment-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .assignment-card h2 {
+            font-size: 24px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .assignment-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .assignment-card .status {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .assignment-card .status strong {
+            color: #1e3a8a;
+        }
+
+        .assignment-card .due-date {
+            font-size: 14px;
+            color: #888;
+            font-weight: bold;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #357ABD;
+        }
+
+        /* Form Input Styles */
+        .assignment-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .assignment-form input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .assignment-form label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Instructional Text */
+        .assignment-instructions {
+            font-size: 16px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .assignment-instructions h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .assignment-instructions ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .assignment-instructions ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #1e3a8a;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .assignments-container {
+                padding: 20px;
+            }
+
+            .assignment-card {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your Assignment Dashboard</h1>
+</header>
+
+<main class="assignments-container">
+    <!-- Assignment 1 -->
+    <div class="assignment-card">
+        <h2>Mathematics Assignment 1</h2>
+        <p class="status">Status: <strong>Incomplete</strong></p>
+        <p class="due-date">Due: Nov 15, 2024</p>
+        
+        <!-- Assignment Instructions -->
+        <div class="assignment-instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Complete the problems on the attached worksheet.</li>
+                <li>Show all your working out for each question.</li>
+                <li>Submit the assignment by the due date to avoid penalties.</li>
+            </ul>
+        </div>
+        
+        <!-- Assignment Submission Form -->
+        <form class="assignment-form">
+            <label for="math-assignment-file">Upload your completed assignment here:</label>
+            <input type="file" id="math-assignment-file" name="math-assignment-file">
+            <button type="submit" class="submit-btn">Submit Assignment</button>
+        </form>
+    </div>
+
+    <!-- Assignment 2 -->
+    <div class="assignment-card">
+        <h2>Science Project</h2>
+        <p class="status">Status: <strong>Submitted</strong></p>
+        <p class="due-date">Due: Oct 30, 2024</p>
+
+        <!-- Assignment Instructions -->
+        <div class="assignment-instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Research and create a presentation on a recent scientific discovery.</li>
+                <li>Include at least three credible sources and present your findings clearly.</li>
+                <li>Ensure your presentation is 10-15 slides long and visually engaging.</li>
+            </ul>
+        </div>
+
+        <!-- Assignment Submission Form -->
+        <form class="assignment-form">
+            <label for="science-assignment-file">Upload your completed project here:</label>
+            <input type="file" id="science-assignment-file" name="science-assignment-file">
+            <button type="submit" class="submit-btn">Submit Project</button>
+        </form>
+    </div>
+
+    <!-- Assignment 3 -->
+    <div class="assignment-card">
+        <h2>History Essay</h2>
+        <p class="status">Status: <strong>In Progress</strong></p>
+        <p class="due-date">Due: Dec 5, 2024</p>
+
+        <!-- Assignment Instructions -->
+        <div class="assignment-instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Write a 2000-word essay on the causes and effects of the French Revolution.</li>
+                <li>Include a minimum of five historical sources to support your argument.</li>
+                <li>Your essay must be properly formatted with a bibliography at the end.</li>
+            </ul>
+        </div>
+
+        <!-- Assignment Submission Form -->
+        <form class="assignment-form">
+            <label for="history-assignment-file">Upload your completed essay here:</label>
+            <input type="file" id="history-assignment-file" name="history-assignment-file">
+            <button type="submit" class="submit-btn">Submit Essay</button>
+        </form>
+    </div>
+
+    <!-- Assignment 4 -->
+    <div class="assignment-card">
+        <h2>Computer Science Lab Report</h2>
+        <p class="status">Status: <strong>Not Started</strong></p>
+        <p class="due-date">Due: Dec 20, 2024</p>
+
+        <!-- Assignment Instructions -->
+        <div class="assignment-instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Complete the lab exercises provided in the course material.</li>
+                <li>Document your process, results, and conclusions in the report.</li>
+                <li>Make sure to include code snippets and screenshots where necessary.</li>
+            </ul>
+        </div>
+
+        <!-- Assignment Submission Form -->
+        <form class="assignment-form">
+            <label for="cs-assignment-file">Upload your lab report here:</label>
+            <input type="file" id="cs-assignment-file" name="cs-assignment-file">
+            <button type="submit" class="submit-btn">Submit Report</button>
+        </form>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>Sam Education: Empowering Learning in Burundi</p>
+</footer>
+
+</body>
+</html>
+

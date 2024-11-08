@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Sam Education</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* Profile Container */
+        .profile-container {
+            background-color: #ffffff;
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header h2 {
+            font-size: 28px;
+            color: #1e3a8a;
+        }
+
+        .profile-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Profile Field */
+        .profile-field {
+            margin-bottom: 20px;
+        }
+
+        .profile-field label {
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .profile-field input {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .profile-field input:focus {
+            border-color: #1e3a8a;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(30, 58, 138, 0.2);
+        }
+
+        /* Save Button */
+        .save-button {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .save-button:hover {
+            background-color: #163174;
+            transform: translateY(-3px);
+        }
+
+        /* Additional Info Section */
+        .additional-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f4f7f6;
+            border-radius: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .additional-info h3 {
+            font-size: 18px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .additional-info p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>Sam Education - Profile</header>
+
+<main class="profile-container">
+    <div class="profile-header">
+        <h2>Your Profile</h2>
+        <p>Manage your personal information and update as needed</p>
+    </div>
+
+    <div class="profile-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" value="">
+    </div>
+
+    <div class="profile-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" value="">
+    </div>
+
+    <div class="profile-field">
+        <label for="student-id">Student ID</label>
+        <input type="text" id="student-id" value="12345">
+    </div>
+
+    <div class="profile-field">
+        <label for="course">Course Enrolled</label>
+        <input type="text" id="course" value="Computer Science">
+    </div>
+
+    <div class="profile-field">
+        <label for="year">Year of Study</label>
+        <input type="text" id="year" value="2024">
+    </div>
+
+    <button class="save-button">Save Changes</button>
+
+    <section class="additional-info">
+        <h3>Additional Information</h3>
+        <p>For any issues with your profile, please contact support at <a href="mailto:support@sam-education.com">support@sam-education.com</a>.</p>
+        <p>Visit our <a href="#">Help Center</a> for more information on profile management and other services.</p>
+    </section>
+</main>
+
+</body>
+</html>
+

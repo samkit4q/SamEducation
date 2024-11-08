@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login - Sam Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .social-button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold; /* Make text bold */
+        }
+
+
+        .social-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .redirect {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .recaptcha {
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome Back</h2>
+        <form action="/login" method="POST" id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="name@email.com" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <p><a href="/forgot-password">Forgot password?</a></p>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="social-buttons">
+            <div class="social-button" onclick="window.location.href='/auth/google'">
+                <img src="data:image/png;base64,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" alt="Google Logo">
+                Continue with Google
+            </div>
+            <div class="social-button" onclick="window.location.href='/auth/facebook'">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAY1BMVEU7V53///81U5tQZ6X19/rQ1eQpS5hXbKfd4Ovx8vdFX6HByNx6ibb6+vw5VZwdRJSpss+Kl78wT5kLO5FgdKzk5/BLY6OjrcxwgrOTn8S2vtbHzd9leK6apMaBj7rW2+gALItbzs1yAAADVUlEQVR4nO3c2W6jMACFYddJHJZgwKyBJPT9n3LSWW46pQZS4wM6/22FxCcXE8wiEqXFLtIqEXHhey9+qiIWufK9Ez+VykUpfe/ETyVL33vAGGOMMcYYY4yxSWkpjfqcMUY+05taEDMqNXXZXvL8er3frx/lef64XNr2Vp7r599Vuom1F21SU+ZN1w9VeEze/pUkxzCsqioYTn3cdVlzxh8emao264PwzdoFfWhkETWnKrFL8DG6iLpwmgQeo4pssgQcI4t2hgQao2XUz7PgYrRsJ8xf28BIfZ1tQcVI0cy3gGK0bI7zLaAYdZ0zI2Nj1GXJuGBipF40LpiY92qZBRFTNAstgBhzXvhPBojR6WmpBQ+jHgvOlqAYLef+ugTGvDIwaBhtuuUWNIy5BfvBqPsLFjCMjOL9YEy79JcMIEblr1iwMFpkM3Y9+RwWRh6mnTGTKhj6rss+1UE9tWjKKYfM8ZS1kUq/CMnyPP4nWIY8ShXUbn+dedgt8RlrAMbS0n7KjCPjezenNWEyq8qNWIS2Ly5fDf7NsT/JyHaRGWxmYISubTNzJ7YyMEJaMfftvJggD5arzPCxI0zVbuaQeWIsS8zBbRPny99ZMcN2JjM75nTe0cgQ4yliUCMGNWJQIwY1YlAjBjViUCPGc6PreC9ivKwP/v8OzN/SyIap07FtP1p/2HSUBaN9b3k7jm/5bFh/VU2/dqv/m8I9YYLbjjD9+nOdO0wX7QiT+ZjNXGGa9e93uMNcd4TxcSfKGcbHnShnmMHDY0DOMH29/i9NZ5jYw+WBM0yX7gjT7Ahz9HCacYbx8sCDK4yXBx5cYYbDjmazk/SwoOEKE3uYzJxhfJxmXGESH6cZV5jQywd/XWG8PIrmCFN5WYZ2hAm8fN/IEWbwcfy7wvRevl7uCOPlNCNk1B3DkWyfNEjGNgxDHxcAH9WHkeqb7f7MbXTbyNOj6HIsU9swBzO2Ldxj9Vu8pzkaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxs1rxOzuOMbIUK77N7RijchGv92qqY0wRi0St9tagW4xWyS9THEsQy9aq8wAAAABJRU5ErkJggg==" alt="Facebook Logo">
+                Continue with Facebook
+            </div>
+            <div class="social-button" onclick="window.location.href='/auth/apple'">
+                <img src="data:image/jpeg;base64,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" alt="Apple Logo">
+                Continue with Apple
+            </div>
+        </div>
+
+        <div class="redirect">
+            <p>New to Sam Education? <a href="register.html">Sign up</a>.</p>
+            <p>Log in with your organization</p>
+        </div>
+
+        <div class="recaptcha">
+            <p>This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.</p>
+        </div>
+    </div>
+</body>
+</html>
+

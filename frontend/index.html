@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome to Sam Education</title>
+    <style>
+        /* Button styling for better visibility */
+        .top-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .cta-btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .cta-btn.secondary-btn {
+            background-color: #007bff;
+        }
+
+        .cta-btn.secondary-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cta-btn.register-btn {
+            background-color: #28a745;
+        }
+
+        .cta-btn.register-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Top Buttons for Login and Register -->
+        <div class="top-buttons">
+            <a href="login.html" class="cta-btn secondary-btn">Login</a>
+            <a href="register.html" class="cta-btn register-btn">Register</a>
+        </div>
+    </header>
+
+    <section class="home-page">
+        <!-- Hero Section -->
+        <div class="home-content container">
+            <h2>Welcome to Sam Education</h2>
+            <p>Providing quality education in Burundi with offline capabilities and digital skills training.</p>
+            <a href="/courses" class="cta-btn primary-btn">Explore Courses</a>
+        </div>
+
+        <!-- Educational Resources Section -->
+        <section class="resources container">
+            <h2>Educational Resources</h2>
+            <p>Access free, downloadable educational content designed for offline use.</p>
+            <div class="resource-links">
+                <a href="/resources" class="cta-btn secondary-btn">Browse Resources</a>
+            </div>
+        </section>
+
+        <!-- Digital Literacy Section -->
+        <section class="digital-literacy container">
+            <h2>Digital Literacy Training</h2>
+            <p>Interactive modules to help you gain essential digital skills. Track your progress and learn offline!</p>
+            <div class="literacy-links">
+                <a href="/digital-literacy" class="cta-btn secondary-btn">Start Training</a>
+            </div>
+        </section>
+
+        <!-- Featured Courses Section (Updated to Display in Rows) -->
+        <section class="featured-courses container">
+            <h2>Featured Courses</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <img src="img/math.jpg" alt="Mathematics">
+                    <h3>Mathematics for High School</h3>
+                    <p>Master algebra, geometry, and calculus fundamentals.</p>
+                </div>
+                <div class="course-item">
+                    <img src="img/cs.jpg" alt="Computer Science">
+                    <h3>Introduction to Computer Science</h3>
+                    <p>Learn the basics of coding and how computers work.</p>
+                </div>
+                <div class="course-item">
+                    <img src="img/english.jpg" alt="English Language">
+                    <h3>English Language Skills</h3>
+                    <p>Improve your reading, writing, and speaking skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials container">
+            <h2>What Our Students Say</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <p>"Sam Education has changed my life."</p>
+                    <p>- Aline, High School Student</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"The platform is so easy to use!"</p>
+                    <p>- Jean, University Student</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Sam Education. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Sam Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7f6;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .admin-container {
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .admin-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .admin-card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .admin-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .manage-button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .manage-button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard - Sam Education</h1>
+    </header>
+
+    <div class="admin-container">
+        <!-- User Management Card -->
+        <div class="admin-card">
+            <h2>Manage Users</h2>
+            <p>View, edit, and delete users from the system.</p>
+            <button class="manage-button">Go to User Management</button>
+        </div>
+
+        <!-- Course Management Card -->
+        <div class="admin-card">
+            <h2>Manage Courses</h2>
+            <p>Add, edit, and remove courses available on the platform.</p>
+            <button class="manage-button">Go to Course Management</button>
+        </div>
+
+        <!-- Assignment Management Card -->
+        <div class="admin-card">
+            <h2>Manage Assignments</h2>
+            <p>Create and assign assignments for courses.</p>
+            <button class="manage-button">Go to Assignment Management</button>
+        </div>
+
+        <!-- Reports Card -->
+        <div class="admin-card">
+            <h2>View Reports</h2>
+            <p>Access detailed reports on user activity and course engagement.</p>
+            <button class="manage-button">Go to Reports</button>
+        </div>
+    </div>
+</body>
+</html>
+

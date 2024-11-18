@@ -22,5 +22,7 @@ TEMPLATES = [
     },
 ]
 
-# Other settings...
+# Add this line to define the URL configuration module
+ROOT_URLCONF = 'SamEducation' 
 
+# Other settings...
